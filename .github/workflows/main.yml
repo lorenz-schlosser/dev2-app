@@ -5,10 +5,10 @@ run-name: L+T, triggered by ${{github.actor}}
 on:
   push:
     branches:
-        - main
+      - main
   pull_request:
     branches:
-        - main
+      - main
 
 jobs:
   lint:
@@ -27,7 +27,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install -e .
-          python -m pip install -e .
+          python -m pip install -e .[lint]
           
       - name: Lint code
         run: ruff check --output-format=github .
