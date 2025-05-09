@@ -3,10 +3,10 @@ run-name: L+T, triggered by ${{github.actor}}
 on:
   push:
     branches:
-      - main
+      - master
   pull_request:
     branches:
-      - main
+      - master
 
 jobs:
   lint:
